@@ -83,6 +83,16 @@ h3 {
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 0 5px #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card:hover {
+   transform: scale(1.02);
+   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+   box-shadow: 0 0 5px #4d6180; 
 }
 
 .project-card ul {
@@ -277,10 +287,10 @@ footer .container {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-cover:hover {
+/*.project-cover:hover {
   transform: scale(1.02);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
+}*/
 
 .contact-content {
   text-align: center;
