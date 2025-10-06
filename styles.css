@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: #0f1117;
-    color: #e0e0e0;
+    background: linear-gradient(135deg, #fbfdff 0%, #f5f0ff 50%, #ffffff 100%);
+    color: #1f2937;
     line-height: 1.6;
 }
 
@@ -25,13 +25,14 @@ body.overlay-active {
 
 header {
     text-align: center;
-    background: #1a1d26;
-    border-bottom: 2px solid #2e3440;
+    background: linear-gradient(135deg, #ffffff 0%, #f3f6ff 55%, #ecf9ff 100%);
+    border-bottom: 1px solid #dbeafe;
+    box-shadow: 0 10px 30px rgba(148, 163, 184, 0.15);
 }
 
 header p {
     font-size: 1.2rem;
-    color: #ccc;
+    color: #475569;
     margin-top: 0.5rem;
 }
 
@@ -50,24 +51,24 @@ section {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-    border: 1px solid #5eead4;
+    border: 2px solid #6366f1;
 }
 
 h1 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    color: #5eead4;
+    color: #312e81;
 }
 
 p {
     font-size: 1rem;
-    color: #ccc;
+    color: #4a5568;
 }
 
 h2 {
     font-family: "Marcellus", serif;
     font-size: 1.5rem;
-    color: #81a1c1;
+    color: #4f46e5;
     margin-bottom: 1rem;
     margin-top: 2rem;
 }
@@ -75,6 +76,10 @@ h2 {
 h3 {
     text-align: center;
     margin-bottom: 10px;
+}
+
+ul {
+    margin-left: 14px;
 }
 
 .projects {
@@ -88,6 +93,7 @@ h3 {
     perspective: 1200px;
     color: inherit;
     height: 100%;
+    cursor: pointer;
 }
 
 .project-card .card-inner {
@@ -96,6 +102,7 @@ h3 {
     height: 100%;
     transition: transform 0.6s ease;
     transform-style: preserve-3d;
+    cursor: inherit;
 }
 
 .project-card:hover .card-inner {
@@ -108,17 +115,20 @@ h3 {
 
 .project-card:hover .card-front,
 .project-card:focus-visible .card-front {
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), 0 0 5px #4d6180;
+    box-shadow: 0 18px 35px rgba(148, 163, 184, 0.25), 0 0 0 1px rgba(129, 161, 193, 0.15);
 }
 
 .card-face {
-    background-color: #1e222e;
-    border-radius: 10px;
-    box-shadow: 0 0 5px #333;
+    background: linear-gradient(160deg, #ffffff 0%, #f5f8ff 60%, #eef3ff 100%);
+    border-radius: 12px;
+    border: 1px solid #dbeafe;
+    box-shadow: 0 12px 30px rgba(148, 163, 184, 0.18);
     padding: 1rem;
     backface-visibility: hidden;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
     height: 100%;
+    color: #1f2937;
+    cursor: inherit;
 }
 
 .card-front {
@@ -126,6 +136,7 @@ h3 {
     z-index: 2;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
 .card-back {
@@ -144,8 +155,8 @@ h3 {
     flex-grow: 1;
 }
 
-.card-front .tech-grid-project {
-    margin-top: 10px;
+.card-face p {
+    color: #4a5568;
 }
 
 .card-back-content {
@@ -168,24 +179,26 @@ h3 {
     border-radius: 9999px;
     font-weight: 600;
     text-decoration: none;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
 .card-btn-primary {
-    background: linear-gradient(135deg, #5eead4 0%, #4acdc1 100%);
-    color: #000;
+    background: linear-gradient(135deg, #6366f1 0%, #22d3ee 100%);
+    color: #ffffff;
+    box-shadow: 0 10px 20px rgba(79, 124, 247, 0.25);
 }
 
 .card-btn-outline {
-    border: 1px solid rgba(94, 234, 212, 0.6);
-    color: #5eead4;
-    background: rgba(94, 234, 212, 0.08);
+    border: 1px solid rgba(99, 102, 241, 0.45);
+    color: #4338ca;
+    background: rgba(99, 102, 241, 0.08);
 }
 
 .card-btn:hover,
 .card-btn:focus {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(90, 116, 148, 0.25);
+    box-shadow: 0 16px 30px rgba(79, 124, 247, 0.25);
+    filter: brightness(1.05);
     outline: none;
 }
 
@@ -241,13 +254,21 @@ textarea {
 }
 
 button {
-    background-color: #5eead4;
-    color: #000;
-    padding: 0.75rem;
-    font-weight: bold;
+    background: linear-gradient(135deg, #6366f1 0%, #22d3ee 100%);
+    color: #ffffff;
+    padding: 0.75rem 1.25rem;
+    font-weight: 600;
     border: none;
-    border-radius: 5px;
+    border-radius: 9999px;
     cursor: pointer;
+    box-shadow: 0 12px 24px rgba(79, 124, 247, 0.2);
+}
+
+button:hover,
+button:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 32px rgba(79, 124, 247, 0.24);
+    outline: none;
 }
 
 .success {
@@ -256,12 +277,12 @@ button {
 }
 
 footer {
-    background: #1a1d26;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fbff 60%, #eef5ff 100%);
     text-align: center;
     padding: 10px;
     font-size: 0.9rem;
-    color: #888;
-    border-top: 2px solid #2e3440;
+    color: #475569;
+    border-top: 1px solid #dbeafe;
 }
 
 footer .container {
@@ -374,7 +395,7 @@ footer .container {
 
 .tech-item span {
     font-size: 0.75rem;
-    color: #ccc;
+    color: #64748b;
 }
 
 .tech-item:hover {
@@ -385,22 +406,22 @@ footer .container {
 .btn-resume {
     display: inline-block;
     margin-top: 1rem;
-    padding: 0.6rem 1.2rem;
-    background-color: #5eead4;
-    color: #000;
-    font-weight: bold;
+    padding: 0.65rem 1.4rem;
+    background: linear-gradient(135deg, #6366f1 0%, #22d3ee 100%);
+    color: #ffffff;
+    font-weight: 600;
     border: none;
-    border-radius: 5px;
+    border-radius: 9999px;
     text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 5px rgba(94, 234, 212, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 12px 24px rgba(79, 124, 247, 0.22);
 }
 
 .btn-resume:hover,
 .btn-resume:focus {
-    background-color: #4acdc1;
-    box-shadow: 0 4px 10px rgba(74, 205, 193, 0.7);
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(79, 124, 247, 0.28);
     outline: none;
 }
 
@@ -427,7 +448,7 @@ footer .container {
 .contact-content p {
     margin-bottom: 1rem;
     font-size: 1rem;
-    color: #ccc;
+    color: #4a5568;
 }
 
 .main-content {
