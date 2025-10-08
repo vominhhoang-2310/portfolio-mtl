@@ -185,7 +185,6 @@ ul {
 .card-btn-primary {
     background: linear-gradient(135deg, #6366f1 0%, #22d3ee 100%);
     color: #ffffff;
-    box-shadow: 0 10px 20px rgba(79, 124, 247, 0.25);
 }
 
 .card-btn-outline {
@@ -362,17 +361,33 @@ footer .container {
 
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-top: 1rem;
 }
 
-.tech-grid-project {
+.tech-grid-project-3 {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: auto;
+}
+
+.tech-grid-project-4 {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: auto;
+}
+
+.tech-grid-project-5 {
     display: grid;
     text-align: center;
     grid-template-columns: repeat(5, 1fr);
     gap: 1.5rem;
-    margin-top: 2rem;
+    margin: auto;
 }
 
 .tech-grid-project .tech-item i {
@@ -391,6 +406,10 @@ footer .container {
     margin-bottom: 0.5rem;
     transition: transform 0.3s ease;
 
+}
+
+.project-card .tech-item i {
+    font-size: 1.5rem;
 }
 
 .tech-item span {
@@ -468,5 +487,20 @@ footer .container {
         opacity: 1;
         transform: none;
         transition: none;
+    }
+}
+
+@media screen and (min-width: 520px) {
+    .card-btn-primary {
+        background: linear-gradient(135deg, #6366f1 0%, #22d3ee 100%);
+        color: #ffffff;
+        box-shadow: 0 10px 20px rgba(79, 124, 247, 0.25);
+    }
+
+    .tech-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1.5rem;
+        margin-top: 1rem;
     }
 }
