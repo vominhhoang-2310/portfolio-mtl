@@ -1,275 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hoang's portfolio</title>
   <link rel="icon" href="assets/profile.jpg" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <script src="https://kit.fontawesome.com/5fca7079c2.js" crossorigin="anonymous"></script>
   <script src="scripts.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <img src="assets/profile.jpg" alt="Profile" class="profile-pic">
-      <h1>Xin chào, <span class="typing">
-      <span>I</span><span>'</span><span>m</span><span> </span>
-      <span>H</span><span>o</span><span>a</span><span>n</span><span>g</span><span> </span>
-      <span>V</span><span>o</span>
-      </span></h1>
-      <p>Full-stack Developer</p>
-      <a href="assets/Hoang_Vo_Resume.pdf" target="_blank" role="button" class="btn-resume">View Resume</a>
+  <header id="about" class="site-header fade-up">
+    <div class="container header-grid">
+      <div class="header-text">
+        <span class="header-eyebrow">Xin chào, I'm</span>
+        <h1>Hoang Vo</h1>
+        <p class="header-role">Full-stack Developer</p>
+        <div class="about-copy">
+          <h2>About Me</h2>
+          <p>I am a passionate and results-driven full-stack developer with a strong interest in web, game, and AI
+            technologies. With nearly three years of experience building scalable, secure, and high-performance web
+            applications, I focus on writing clean, maintainable code and championing best practices.</p>
+          <p>My expertise spans modern frameworks and tools that help me deliver solutions aligned with both user and
+            business needs. I am committed to continuous learning and stay curious so I can adapt quickly in this
+            ever-evolving industry.</p>
+        </div>
+        <a href="assets/Hoang_Vo_Resume.pdf" target="_blank" role="button" class="btn-resume">View Resume</a>
+      </div>
+      <div class="header-photo">
+        <div class="photo-ring">
+          <img src="assets/profile.jpg" alt="Profile portrait of Hoang Vo" class="profile-photo">
+        </div>
+      </div>
     </div>
   </header>
 
-  <main class="container main-content">
-    <section>
-      <h2>About Me</h2>
-      <p>I am a passionate and results-driven full-stack developer with a strong interest in various technology fields, including web development, game development, and AI. With nearly 3 years of experience in crafting scalable, secure, and high-performance web applications, I take pride in writing clean, maintainable code and following best practices in software engineering. My expertise extends to working with modern frameworks and tools, enabling me to deliver solutions that meet both user and business needs. I am continuously learning and adapting to new technologies to stay ahead in this ever-evolving industry.</p>
-    </section>
-
-    <section>
-      <h2>Projects</h2>
-      <div class="projects">
-        <div class="project-card" data-live="https://literacy.concordia.ca/resources/elm/teacher/en/" data-code="https://drive.google.com/drive/folders/1H8Totjon46mXEIb00_alj-2MAyyPxaQl?usp=sharing">
-          <div class="card-inner">
-            <div class="card-face card-front">
-              <img src="assets/ELM_resources.png" class="project-cover" alt="ELM Resources website">
-              <h3>ELM Resources</h3>
-              <p>A collection of resources for teachers and parents using the ELM software in the Learning Toolkit+.</p>
-              <ul>
-                <li><strong>Work project at CSLP, Concordia University</strong></li>
-                <li><strong>My Contributions:</strong> Implemented a new responsive layout design and replaced outdated documents with updated versions.</li>
-              </ul>
-              <div class="tech-grid-project-4">
-                <div class="tech-item"><i class="fab fa-php"></i></div>
-                <div class="tech-item"><i class="fab fa-html5"></i></div>
-                <div class="tech-item"><i class="fab fa-css3-alt"></i></div>
-                <div class="tech-item"><i class="fab fa-js-square"></i></div>
-              </div>
-            </div>
-            <div class="card-face card-back" aria-hidden="true">
-              <div class="card-back-content">
-                <h3 class="card-back-title"></h3>
-                <p>Select an option below:</p>
-                <div class="card-back-actions">
-                  <a class="card-btn card-btn-primary card-live" target="_blank" rel="noopener noreferrer">Live Website</a>
-                  <a class="card-btn card-btn-outline card-code" target="_blank" rel="noopener noreferrer">View Code Sample</a>
-                </div>
-              </div>
-            </div>
-          </div>
+  <main class="page-content fade-up">
+    <section id="projects" class="section projects-section reveal-on-scroll">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Projects</h2>
+          <p>Selected work that highlights my end-to-end ownership, collaboration, and care for detail.</p>
         </div>
-        <div class="project-card" data-live="https://literacy.concordia.ca/resources/abra/teacher/en/" data-code="https://drive.google.com/drive/folders/1D2smxg5gQTD7mskq3hoN4zvAH--qcqpk?usp=sharing">
-          <div class="card-inner">
-            <div class="card-face card-front">
-              <img src="assets/ABRA_resources.png" class="project-cover" alt="ABRA Resources website">
-              <h3>ABRA Resources</h3>
-              <p>A collection of resources for teachers and parents using the ABRA software in the Learning Toolkit+.</p>
-              <ul>
+        <div class="projects-layout">
+          <article class="featured-project" id="project-featured" aria-live="polite">
+            <figure class="featured-media">
+              <img src="assets/ELM_resources.png" alt="Screens from the ELM Resources website" id="featured-image">
+            </figure>
+            <div class="featured-body">
+              <h3 id="featured-title">ELM Resources</h3>
+              <p id="featured-description">A collection of resources for teachers and parents using the ELM software in
+                the Learning Toolkit+.</p>
+              <ul class="project-highlights" id="featured-highlights">
                 <li><strong>Work project at CSLP, Concordia University</strong></li>
-                <li><strong>My Contributions:</strong> Used JSON to manage document metadata, updated outdated resources, and added a new section based on requests.</li>
+                <li><strong>My Contributions:</strong> Implemented a new responsive layout and refreshed outdated
+                  documents with updated versions across the site.</li>
               </ul>
-              <div class="tech-grid-project-4">
-                <div class="tech-item"><i class="fab fa-php"></i></div>
-                <div class="tech-item"><i class="fab fa-html5"></i></div>
-                <div class="tech-item"><i class="fab fa-css3-alt"></i></div>
-                <div class="tech-item"><i class="fab fa-js-square"></i></div>
+              <div class="project-tags" id="featured-tags">
+              </div>
+              <div class="project-actions" id="featured-actions">
+                <a href="https://literacy.concordia.ca/resources/elm/teacher/en/" class="btn btn-primary"
+                  target="_blank" rel="noopener noreferrer">Live Website</a>
+                <a href="https://drive.google.com/drive/folders/1H8Totjon46mXEIb00_alj-2MAyyPxaQl?usp=sharing"
+                  class="btn btn-outline" target="_blank" rel="noopener noreferrer">View Code Sample</a>
               </div>
             </div>
-            <div class="card-face card-back" aria-hidden="true">
-              <div class="card-back-content">
-                <h3 class="card-back-title"></h3>
-                <p>Select an option below:</p>
-                <div class="card-back-actions">
-                  <a class="card-btn card-btn-primary card-live" target="_blank" rel="noopener noreferrer">Live Website</a>
-                  <a class="card-btn card-btn-outline card-code" target="_blank" rel="noopener noreferrer">View Code Sample</a>
-                </div>
-              </div>
+          </article>
+          <div class="project-list-panel" id="project-list-panel" aria-live="polite"></div>
+          <aside class="project-carousel" aria-labelledby="other-projects-heading">
+            <div class="carousel-header">
+              <h3 id="other-projects-heading">Other Projects</h3>
             </div>
-          </div>
-        </div>
-        <div class="project-card" data-live="https://literacy.concordia.ca/reads/index.html#en" data-code="https://drive.google.com/drive/folders/1RIy8eFUWc_hQwjTIE1bXngXIWsucl-Zm?usp=drive_link">
-          <div class="card-inner">
-            <div class="card-face card-front">
-              <img src="assets/LTK_READS.jpg" class="project-cover" alt="LTK READS">
-              <h3>LTK READS</h3>
-              <p>A web-based story catalogue featuring hundreds of multilingual children’s books, with search filters by theme, reading level, language, and country of origin.</p>
-              <ul>
-                <li><strong>Work project at CSLP, Concordia University</strong></li>
-                <li><strong>My Contributions:</strong> Implemented a new "About" page accessible from the footer, maintained consistent UI/UX standards across the site, and fixed reported bugs.</li>
-              </ul>
-              <div class="tech-grid-project-3">
-                <div class="tech-item"><i class="fab fa-html5"></i></div>
-                <div class="tech-item"><i class="fab fa-css3-alt"></i></div>
-                <div class="tech-item"><i class="fab fa-js-square"></i></div>
-              </div>
+            <div class="carousel-viewport">
+              <div class="carousel-track" id="carousel-track"></div>
             </div>
-            <div class="card-face card-back" aria-hidden="true">
-              <div class="card-back-content">
-                <h3 class="card-back-title"></h3>
-                <p>Select an option below:</p>
-                <div class="card-back-actions">
-                  <a class="card-btn card-btn-primary card-live" target="_blank" rel="noopener noreferrer">Live Website</a>
-                  <a class="card-btn card-btn-outline card-code" target="_blank" rel="noopener noreferrer">View Code Sample</a>
-                </div>
-              </div>
+            <div class="carousel-controls">
+              <button class="carousel-control prev" type="button" aria-label="Show previous projects">
+                <i class="fas fa-arrow-up"></i>
+              </button>
+              <button class="carousel-control next" type="button" aria-label="Show next projects">
+                <i class="fas fa-arrow-down"></i>
+              </button>
             </div>
-          </div>
-        </div>
-        <div class="project-card" data-live="https://drive.google.com/drive/folders/11tOAIjJadtTOJu9FQgITZCaOoJnCZ9G-?usp=drive_link" data-code="#">
-          <div class="card-inner">
-            <div class="card-face card-front">
-              <img src="assets/LTK+.png" class="project-cover" alt="Learning Toolkit+">
-              <h3>Learning Toolkit+</h3>
-              <p>A suite of English and French tools designed to support the development of literacy, numeracy, information literacy and self-regulated learning skills.</p>
-              <ul>
-                <li><strong>Work project at CSLP, Concordia University</strong></li>
-                <li><strong>My Contributions:</strong> Resolved reported bugs and ensured software compatibility with the latest PHP and MySQL versions.</li>
-              </ul>
-              <div class="tech-grid-project-5">
-                <div class="tech-item"><i class="fab fa-php"></i></div>
-                <div class="tech-item"><i class="fab fa-html5"></i></div>
-                <div class="tech-item"><i class="fab fa-css3-alt"></i></div>
-                <div class="tech-item"><i class="fab fa-js-square"></i></div>
-                <div class="tech-item"><i class="fas fa-database"></i></div>
-              </div>
-            </div>
-            <div class="card-face card-back" aria-hidden="true">
-              <div class="card-back-content">
-                <h3 class="card-back-title"></h3>
-                <p>Select an option below:</p>
-                <div class="card-back-actions">
-                  <a class="card-btn card-btn-primary card-live" target="_blank" rel="noopener noreferrer">Live Website</a>
-                  <a class="card-btn card-btn-outline card-code" target="_blank" rel="noopener noreferrer">View Code Sample</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="project-card" data-live="https://drive.google.com/drive/folders/1Gvb6V1lDsI5mDPbVU2-JKe15tRVRN0oX?usp=drive_link" data-code="https://drive.google.com/drive/folders/1Xlyua4XQ4nXRNMRS8FoyWU9cGNrCo8ll?usp=drive_link">
-          <div class="card-inner">
-            <div class="card-face card-front">
-              <img src="assets/Readsmanage.png" class="project-cover" alt="Readsmanage">
-              <h3>Readsmanage</h3>
-              <p>A web application for creating and managing books. It includes secure user authentication, allowing users to log in and manage their content.</p>
-              <ul>
-                <li><strong>Work project at CSLP, Concordia University</strong></li>
-                <li><strong>My Contributions:</strong> Migrated the project from Vue 2 to Vue 3, converted components to the Composition API, and upgraded from Laravel 8 to Laravel 9.</li>
-              </ul>
-              <div class="tech-grid-project-4">
-                <div class="tech-item"><i class="fab fa-php"></i></div>
-                <div class="tech-item"><i class="fas fa-database"></i></div>
-                <div class="tech-item"><i class="fab fa-laravel"></i></div>
-                <div class="tech-item"><i class="fa-brands fa-vuejs"></i></div>
-              </div>
-            </div>
-            <div class="card-face card-back" aria-hidden="true">
-              <div class="card-back-content">
-                <h3 class="card-back-title"></h3>
-                <p>Select an option below:</p>
-                <div class="card-back-actions">
-                  <a class="card-btn card-btn-primary card-live" target="_blank" rel="noopener noreferrer">Live Website</a>
-                  <a class="card-btn card-btn-outline card-code" target="_blank" rel="noopener noreferrer">View Code Sample</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="project-card" data-live="https://abralite.concordia.ca" data-code="#">
-          <div class="card-inner">
-            <div class="card-face card-front">
-              <img src="assets/ABRA.jpg" class="project-cover" alt="ABRA">
-              <h3>ABRA</h3>
-              <p>An evidence-based and evidence-proven tool, designed to build foundational literacy skills. This software may be used by pre-readers, beginning readers, struggling readers, as well as ESL learners.</p>
-              <ul>
-                <li><strong>Work project at CSLP, Concordia University</strong></li>
-                <li><strong>My Contributions:</strong> Fixed reported bugs in collaboration with cross-functional teams, including senior web designer and QA tester.</li>
-              </ul>
-              <div class="tech-grid-project-5">
-                <div class="tech-item"><i class="fab fa-php"></i></div>
-                <div class="tech-item"><i class="fab fa-html5"></i></div>
-                <div class="tech-item"><i class="fab fa-css3-alt"></i></div>
-                <div class="tech-item"><i class="fab fa-js-square"></i></div>
-                <div class="tech-item"><i class="fas fa-database"></i></div>
-              </div>
-            </div>
-            <div class="card-face card-back" aria-hidden="true">
-              <div class="card-back-content">
-                <h3 class="card-back-title"></h3>
-                <p>Select an option below:</p>
-                <div class="card-back-actions">
-                  <a class="card-btn card-btn-primary card-live" target="_blank" rel="noopener noreferrer">Live Website</a>
-                  <a class="card-btn card-btn-outline card-code" target="_blank" rel="noopener noreferrer">View Code Sample</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="project-card" data-live="https://elm-demo.infinityfree.me/elm/" data-code="#">
-          <div class="card-inner">
-            <div class="card-face card-front">
-              <img src="assets/ELM.jpg" class="project-cover" alt="ABRA">
-              <h3>ELM</h3>
-              <p>A JavaScript-based tool for helping early elementary students develop their number sense and avoid math anxiety.</p>
-              <ul>
-                <li><strong>Work project at CSLP, Concordia University</strong></li>
-                <li><strong>My Contributions:</strong> Fixed reported bugs in collaboration with cross-functional teams, including senior web designer and QA tester.</li>
-              </ul>
-              <div class="tech-grid-project-5">
-                <div class="tech-item"><i class="fab fa-php"></i></div>
-                <div class="tech-item"><i class="fab fa-html5"></i></div>
-                <div class="tech-item"><i class="fab fa-css3-alt"></i></div>
-                <div class="tech-item"><i class="fab fa-js-square"></i></div>
-                <div class="tech-item"><i class="fas fa-database"></i></div>
-              </div>
-            </div>
-            <div class="card-face card-back" aria-hidden="true">
-              <div class="card-back-content">
-                <h3 class="card-back-title"></h3>
-                <p>Select an option below:</p>
-                <div class="card-back-actions">
-                  <a class="card-btn card-btn-primary card-live" target="_blank" rel="noopener noreferrer">Live Website</a>
-                  <a class="card-btn card-btn-outline card-code" target="_blank" rel="noopener noreferrer">View Code Sample</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          </aside>
         </div>
       </div>
     </section>
 
-    <section>
-      <h2>Tech Stack</h2>
-      <div class="tech-grid">
-        <div class="tech-item"><i class="fab fa-php"></i><span>PHP</span></div>
-        <div class="tech-item"><i class="fab fa-html5"></i><span>HTML</span></div>
-        <div class="tech-item"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
-        <div class="tech-item"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
-        <div class="tech-item"><i class="fas fa-database"></i><span>MySQL</span></div>
-        <div class="tech-item"><i class="fab fa-laravel"></i><span>Laravel</span></div>
-        <div class="tech-item"><i class="fas fa-code-branch"></i><span>SVN/Git</span></div>
-        <div class="tech-item"><i class="fas fa-code"></i><span>VSCode</span></div>
-        <div class="tech-item"><i class="fas fa-server"></i><span>MAMP</span></div>
-        <div class="tech-item"><i class="fas fa-file-code"></i><span>Eclipse</span></div>
-        <div class="tech-item"><i class="fa-brands fa-vuejs"></i><span>Vue.js</span></div>
-        <div class="tech-item"><i class="fas fa-list-check"></i><span>Redmine</span></div>
+    <section id="tech-stack" class="section tech-section reveal-on-scroll">
+      <div class="container">
+        <h2>Tech Stack</h2>
+        <div class="tech-grid">
+          <div class="tech-item"><i class="fab fa-php"></i><span>PHP</span></div>
+          <div class="tech-item"><i class="fab fa-html5"></i><span>HTML</span></div>
+          <div class="tech-item"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+          <div class="tech-item"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+          <div class="tech-item"><i class="fas fa-database"></i><span>MySQL</span></div>
+          <div class="tech-item"><i class="fab fa-laravel"></i><span>Laravel</span></div>
+          <div class="tech-item"><i class="fas fa-code-branch"></i><span>SVN/Git</span></div>
+          <div class="tech-item"><i class="fas fa-code"></i><span>VSCode</span></div>
+          <div class="tech-item"><i class="fas fa-server"></i><span>MAMP</span></div>
+          <div class="tech-item"><i class="fas fa-file-code"></i><span>Eclipse</span></div>
+          <div class="tech-item"><i class="fa-brands fa-vuejs"></i><span>Vue.js</span></div>
+          <div class="tech-item"><i class="fas fa-list-check"></i><span>Redmine</span></div>
+        </div>
       </div>
     </section>
 
-    <section>
-      <h2>Contact Me</h2>
-      <div class="contact-content">
+    <section id="contact" class="section contact-section reveal-on-scroll">
+      <div class="container contact-content">
+        <h2>Contact Me</h2>
         <p>Should you have any questions, proposals, or collaborations, please feel free to reach out.</p>
         <a href="mailto:vominhhoang98@gmail.com" class="btn-resume">Email Me</a>
       </div>
     </section>
   </main>
-
-  <div class="card-overlay" aria-hidden="true"></div>
 
   <footer>
     <div class="container">
@@ -277,4 +125,5 @@
     </div>
   </footer>
 </body>
+
 </html>
