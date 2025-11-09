@@ -840,3 +840,15 @@ body.page-loaded .fade-up {
         transition: none;
     }
 }
+
+/*Custom Font Awesome Icon for Canva*/
+.fa-brands.fa-canva::before{
+  content:"";
+  display:inline-block;
+  width:1em; height:1em;
+  background-color: currentColor;         /* picks up text color */
+  mask: url('https://cdn.simpleicons.org/canva') no-repeat center / contain;
+  -webkit-mask: url('https://cdn.simpleicons.org/canva') no-repeat center / contain;
+  vertical-align: -0.125em;               /* aligns like FA */
+}
+

@@ -182,6 +182,31 @@ document.addEventListener('DOMContentLoaded', () => {
         },
       ],
     },
+    {
+      id: 'portfolio',
+      title: 'Personal Portfolio',
+      image: 'assets/personal_portfolio.jpg',
+      imageAlt: 'Personal portfolio website preview',
+      description:
+        'Personal portfolio built with WordPress and Elementor, customized on the Astra theme.',
+      highlights: [
+        'Personal project',
+        'Designed and developed a WordPress portfolio using Elementor, tailored with the Astra theme.',
+      ],
+      tags: ['wordpress', 'elementor', 'wpforms', 'canva'],
+      links: [
+        {
+          label: 'Visit Site',
+          url: 'https://wordpressportfolio.great-site.net/',
+          variant: 'primary',
+        },
+        {
+          label: 'Code Sample Soon',
+          variant: 'outline',
+          disabled: true,
+        },
+      ],
+    },
   ];
 
   initProjectsCarousel(projects);
@@ -722,6 +747,10 @@ function getTechIconClass(tag) {
     python: 'fab fa-python',
     java: 'fab fa-java',
     typescript: 'fab fa-js-square',
+    wordpress: 'fab fa-wordpress',
+    elementor: 'fa-brands fa-elementor',
+    wpforms: 'fa-brands fa-wpforms',
+    canva: 'fa-brands fa-canva',
   };
 
   const key = tag.toLowerCase();
