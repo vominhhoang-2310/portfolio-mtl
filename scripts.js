@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'portfolio',
       title: 'Personal Portfolio',
-      image: 'assets/personal_portfolio.jpg',
+      image: 'assets/personal_portfolio.gif',
       imageAlt: 'Personal portfolio website preview',
       description:
         'Personal portfolio built with WordPress and Elementor, customized on the Astra theme.',
