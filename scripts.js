@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     yearEl.textContent = new Date().getFullYear();
   }
 
+  initScrollTop();
+
   const projects = [
     {
       id: 'elm-resources',
@@ -21,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tags: ['PHP', 'HTML', 'CSS', 'JavaScript'],
       links: [
         {
-          label: 'Live Website',
+          label: 'Visit Site',
           url: 'https://literacy.concordia.ca/resources/elm/teacher/en/',
           variant: 'primary',
         },
@@ -46,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tags: ['PHP', 'HTML', 'CSS', 'JavaScript'],
       links: [
         {
-          label: 'Live Website',
+          label: 'Visit Site',
           url: 'https://literacy.concordia.ca/resources/abra/teacher/en/',
           variant: 'primary',
         },
@@ -71,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tags: ['HTML', 'CSS', 'JavaScript'],
       links: [
         {
-          label: 'Live Website',
+          label: 'Visit Site',
           url: 'https://literacy.concordia.ca/reads/index.html#en',
           variant: 'primary',
         },
@@ -146,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tags: ['PHP', 'HTML', 'CSS', 'JavaScript', 'MySQL'],
       links: [
         {
-          label: 'Live Website',
+          label: 'Visit Site',
           url: 'https://abralite.concordia.ca',
           variant: 'primary',
         },
@@ -212,6 +214,26 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectsCarousel(projects);
   initScrollReveal();
 });
+
+function initScrollTop() {
+  const btn = document.getElementById('scrollTop');
+  if (!btn) return;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > 320) {
+      btn.classList.add('is-visible');
+    } else {
+      btn.classList.remove('is-visible');
+    }
+  };
+
+  toggleVisibility();
+
+  window.addEventListener('scroll', toggleVisibility, { passive: true });
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 function initProjectsCarousel(projects) {
   const carousel = document.querySelector('.project-carousel');
