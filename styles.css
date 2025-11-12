@@ -149,7 +149,7 @@ p {
 }
 
 .page-content {
-    padding: 4rem 0 6rem;
+    padding-top: 4rem;
 }
 
 .section {
@@ -652,11 +652,48 @@ p {
 }
 
 .contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.contact-visuals {
+    position: relative;
+    flex: 0 1 320px;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.contact-visuals img {
+    padding-top: 40px;
+}
+
+.contact-bubble {
+    position: absolute;
+    top: -20%;
+    right: -35%;
+    width: clamp(120px, 60%, 190px);
+    filter: drop-shadow(0 15px 25px rgba(15, 23, 42, 0.2));
+}
+
+.contact-copy {
+    flex: 1 1 320px;
     max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 40px;
 }
 
 .contact-content p {
-    margin: 0 auto 1.5rem;
+    margin: 0 0 1.5rem;
+}
+
+.contact-copy .btn-resume {
+    align-self: flex-start;
 }
 
 footer {
@@ -728,6 +765,32 @@ body.page-loaded .fade-up {
 
 .scroll-top:active {
     transform: translateY(2px);
+}
+
+/* Moving up/down Animation */
+.sun-bounce {
+    animation: MoveUpDown 4s linear infinite;
+}
+
+@keyframes MoveUpDown {
+    0%,
+    100% {
+        transform: translateY(20px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+}
+
+/*Custom Font Awesome Icon for Canva*/
+.fa-brands.fa-canva::before{
+  content:"";
+  display:inline-block;
+  width:1em; height:1em;
+  background-color: currentColor;         /* picks up text color */
+  mask: url('https://cdn.simpleicons.org/canva') no-repeat center / contain;
+  -webkit-mask: url('https://cdn.simpleicons.org/canva') no-repeat center / contain;
+  vertical-align: -0.125em;               /* aligns like FA */
 }
 
 @media (max-width: 1024px) {
@@ -840,6 +903,61 @@ body.page-loaded .fade-up {
     }
 }
 
+@media (max-width: 866px) {
+    .contact-content {
+        justify-content: center;
+        gap: 30px;
+        text-align: left;
+    }
+
+    .contact-visuals {
+        flex: 0 1 260px;
+        max-width: 260px;
+        margin: 0;
+    }
+
+    .contact-phone {
+        max-width: 230px;
+    }
+
+    .contact-copy {
+        flex: 0 1 320px;
+        max-width: 360px;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    .contact-copy .btn-resume {
+        align-self: flex-start;
+    }
+
+    .contact-bubble {
+        width: clamp(100px, 42%, 150px);
+        right: -10%;
+    }
+}
+
+@media (max-width: 677px) {
+    .contact-visuals {
+        display: none;
+    }
+
+    .contact-content {
+        justify-content: center;
+    }
+
+    .contact-copy {
+        flex: 1 1 100%;
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-copy .btn-resume {
+        align-self: center;
+    }
+}
+
 @media (max-width: 600px) {
     body {
         font-size: 16px;
@@ -880,15 +998,3 @@ body.page-loaded .fade-up {
         transition: none;
     }
 }
-
-/*Custom Font Awesome Icon for Canva*/
-.fa-brands.fa-canva::before{
-  content:"";
-  display:inline-block;
-  width:1em; height:1em;
-  background-color: currentColor;         /* picks up text color */
-  mask: url('https://cdn.simpleicons.org/canva') no-repeat center / contain;
-  -webkit-mask: url('https://cdn.simpleicons.org/canva') no-repeat center / contain;
-  vertical-align: -0.125em;               /* aligns like FA */
-}
-
