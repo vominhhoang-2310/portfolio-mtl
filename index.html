@@ -14,31 +14,50 @@
 
 <body>
   <header id="about" class="site-header fade-up">
-    <div class="container header-grid">
-      <div class="header-text">
-        <span class="header-eyebrow">Xin chào, I'm</span>
-        <h1>Hoang Vo</h1>
-        <p class="header-role">Full-stack Developer</p>
-        <div class="about-copy">
-          <h2>About Me</h2>
-          <p>I am a passionate and results-driven full-stack developer with a strong interest in web, game, and AI
-            technologies. With nearly three years of experience building scalable, secure, and high-performance web
-            applications, I focus on writing clean, maintainable code and championing best practices.</p>
-          <p>My expertise spans modern frameworks and tools that help me deliver solutions aligned with both user and
-            business needs. I am committed to continuous learning and stay curious so I can adapt quickly in this
-            ever-evolving industry.</p>
-        </div>
-        <a href="assets/Hoang_Vo_Resume.pdf" target="_blank" role="button" class="btn-resume">View Resume</a>
+    <div class="container">
+      <div class="site-nav">
+        <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+          <ul class="nav-links">
+            <li><a href="#about" class="nav-link">About Me</a></li>
+            <li><a href="#education-experience" class="nav-link">Education &amp; Experience</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#tech-stack" class="nav-link">Tech Stack</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav"
+          aria-label="Toggle navigation menu">
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+        </button>
       </div>
-      <div class="header-photo">
-        <div class="photo-ring">
-          <img src="assets/profile.jpg" alt="Profile portrait of Hoang Vo" class="profile-photo">
+      <div class="header-grid">
+        <div class="header-text">
+          <span class="header-eyebrow">Xin chào, I'm</span>
+          <h1>Hoang Vo</h1>
+          <p class="header-role">Full-stack Developer</p>
+          <div class="about-copy">
+            <h2>About Me</h2>
+            <p>I am a passionate and results-driven full-stack developer with a strong interest in web, game, and AI
+              technologies. With nearly three years of experience building scalable, secure, and high-performance web
+              applications, I focus on writing clean, maintainable code and championing best practices.</p>
+            <p>My expertise spans modern frameworks and tools that help me deliver solutions aligned with both user and
+              business needs. I am committed to continuous learning and stay curious so I can adapt quickly in this
+              ever-evolving industry.</p>
+          </div>
+          <a href="assets/Hoang_Vo_Resume.pdf" target="_blank" role="button" class="btn-resume">View Resume</a>
+        </div>
+        <div class="header-photo">
+          <div class="photo-ring">
+            <img src="assets/profile.jpg" alt="Profile portrait of Hoang Vo" class="profile-photo">
+          </div>
         </div>
       </div>
     </div>
   </header>
 
-  <main class="page-content fade-up">
+  <main class="fade-up">
     <button class="scroll-top" id="scrollTop" aria-label="Scroll back to top">
       <i class="fas fa-arrow-up"></i>
     </button>

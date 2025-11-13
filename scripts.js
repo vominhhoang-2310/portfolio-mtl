@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initScrollTop();
+  initPrimaryNav();
 
   const projects = [
     {
@@ -777,6 +778,33 @@ function getTechIconClass(tag) {
 
   const key = tag.toLowerCase();
   return map[key] ?? 'fas fa-code';
+}
+
+function initPrimaryNav() {
+  const nav = document.getElementById('primaryNav');
+  const toggle = document.getElementById('navToggle');
+  if (!nav || !toggle) return;
+
+  const setMenuState = (isOpen) => {
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.classList.toggle('is-active', isOpen);
+    nav.classList.toggle('is-open', isOpen);
+  };
+
+  toggle.addEventListener('click', () => {
+    const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+    setMenuState(!isExpanded);
+  });
+
+  nav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenuState(false));
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) {
+      setMenuState(false);
+    }
+  });
 }
 
 function initScrollReveal() {
