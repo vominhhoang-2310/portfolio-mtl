@@ -964,7 +964,7 @@ body.page-loaded .fade-up {
 
     .about-copy {
         position: relative;
-        padding-top: 2rem;
+        padding-top: 10px;
     }
 
     .about-copy::before {
