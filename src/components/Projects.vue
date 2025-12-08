@@ -1,7 +1,7 @@
 <script setup>
 import { computed, nextTick, onBeforeUnmount, onMounted, ref } from "vue";
 import { projects as projectsData } from "../data/projects";
-import { getTechIconClass } from "../data/techStack";
+import { getTechIconClass } from "../data/techstack";
 
 const resolveImage = (file) =>
   new URL(`../assets/${file}`, import.meta.url).href;
@@ -154,11 +154,7 @@ onBeforeUnmount(() => {
               <h3>{{ activeProject.title }}</h3>
               <p>{{ activeProject.description }}</p>
               <ul class="project-highlights">
-                <li
-                  v-for="(item, index) in activeProject.highlights"
-                  :key="index"
-                  v-html="item"
-                ></li>
+                <li v-for="(item, index) in activeProject.highlights" :key="index" v-html="item"></li>
               </ul>
               <div v-if="activeProject.tags?.length" class="project-tags">
                 <span v-for="tag in activeProject.tags" :key="tag" class="tag">
@@ -167,55 +163,28 @@ onBeforeUnmount(() => {
                 </span>
               </div>
               <div v-if="activeProject.links?.length" class="project-actions">
-                <template
-                  v-for="(link, index) in activeProject.links"
-                  :key="index"
-                >
-                  <a
-                    v-if="isLinkEnabled(link)"
-                    :href="link.url"
-                    :class="buttonClass(link)"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                <template v-for="(link, index) in activeProject.links" :key="index">
+                  <a v-if="isLinkEnabled(link)" :href="link.url" :class="buttonClass(link)" target="_blank"
+                    rel="noopener noreferrer">
                     {{ link.label }}
                   </a>
-                  <span
-                    v-else
-                    :class="buttonClass(link) + ' is-disabled'"
-                    aria-disabled="true"
-                  >
+                  <span v-else :class="buttonClass(link) + ' is-disabled'" aria-disabled="true">
                     {{ link.label }}
                   </span>
                 </template>
               </div>
             </div>
           </article>
-          <aside
-            class="project-carousel"
-            aria-labelledby="other-projects-heading"
-            @mouseenter="stopAutoplay"
-            @mouseleave="restartAutoplay"
-            @focusin="stopAutoplay"
-            @focusout="handleFocusOut"
-          >
+          <aside class="project-carousel" aria-labelledby="other-projects-heading" @mouseenter="stopAutoplay"
+            @mouseleave="restartAutoplay" @focusin="stopAutoplay" @focusout="handleFocusOut">
             <div class="carousel-header">
               <h3 id="other-projects-heading">Other Projects</h3>
             </div>
-            <div
-              class="carousel-viewport simple-carousel"
-              ref="carouselViewport"
-            >
+            <div class="carousel-viewport simple-carousel" ref="carouselViewport">
               <div class="carousel-track" ref="carouselTrack">
-                <button
-                  v-for="project in projects"
-                  :key="project.id"
-                  class="carousel-card"
-                  type="button"
-                  :class="{ 'is-active': project.id === activeId }"
-                  @click="setActive(project.id)"
-                  :aria-pressed="project.id === activeId ? 'true' : 'false'"
-                >
+                <button v-for="project in projects" :key="project.id" class="carousel-card" type="button"
+                  :class="{ 'is-active': project.id === activeId }" @click="setActive(project.id)"
+                  :aria-pressed="project.id === activeId ? 'true' : 'false'">
                   <img :src="project.image" :alt="project.imageAlt" />
                   <span class="carousel-card-label">{{ project.title }}</span>
                 </button>
@@ -226,68 +195,36 @@ onBeforeUnmount(() => {
 
         <div class="projects-mobile">
           <div class="project-accordion-list">
-            <div
-              v-for="project in projects"
-              :key="project.id"
-              class="project-accordion-card"
-              :class="{ 'is-active': project.id === activeId }"
-            >
-              <button
-                class="project-accordion-toggle"
-                type="button"
-                @click="setActive(project.id, { skipScroll: true })"
-              >
+            <div v-for="project in projects" :key="project.id" class="project-accordion-card"
+              :class="{ 'is-active': project.id === activeId }">
+              <button class="project-accordion-toggle" type="button"
+                @click="setActive(project.id, { skipScroll: true })">
                 <span>{{ project.title }}</span>
-                <i
-                  class="fas"
-                  :class="project.id === activeId ? 'fa-minus' : 'fa-plus'"
-                ></i>
+                <i class="fas" :class="project.id === activeId ? 'fa-minus' : 'fa-plus'"></i>
               </button>
               <transition name="accordion">
-                <div
-                  v-if="project.id === activeId"
-                  class="project-accordion-body-mobile"
-                >
+                <div v-if="project.id === activeId" class="project-accordion-body-mobile">
                   <figure class="featured-media">
                     <img :src="project.image" :alt="project.imageAlt" />
                   </figure>
                   <div class="featured-body">
                     <p>{{ project.description }}</p>
                     <ul class="project-highlights">
-                      <li
-                        v-for="(item, index) in project.highlights"
-                        :key="index"
-                        v-html="item"
-                      ></li>
+                      <li v-for="(item, index) in project.highlights" :key="index" v-html="item"></li>
                     </ul>
                     <div v-if="project.tags?.length" class="project-tags">
                       <span v-for="tag in project.tags" :key="tag" class="tag">
-                        <i
-                          :class="getTechIconClass(tag)"
-                          aria-hidden="true"
-                        ></i>
+                        <i :class="getTechIconClass(tag)" aria-hidden="true"></i>
                         <span class="sr-only">{{ tag }}</span>
                       </span>
                     </div>
                     <div v-if="project.links?.length" class="project-actions">
-                      <template
-                        v-for="(link, index) in project.links"
-                        :key="index"
-                      >
-                        <a
-                          v-if="isLinkEnabled(link)"
-                          :href="link.url"
-                          :class="buttonClass(link)"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
+                      <template v-for="(link, index) in project.links" :key="index">
+                        <a v-if="isLinkEnabled(link)" :href="link.url" :class="buttonClass(link)" target="_blank"
+                          rel="noopener noreferrer">
                           {{ link.label }}
                         </a>
-                        <span
-                          v-else
-                          :class="buttonClass(link) + ' is-disabled'"
-                          aria-disabled="true"
-                        >
+                        <span v-else :class="buttonClass(link) + ' is-disabled'" aria-disabled="true">
                           {{ link.label }}
                         </span>
                       </template>
