@@ -5,7 +5,7 @@ const currentYear = new Date().getFullYear();
 <template>
   <footer>
     <div class="container">
-      &copy; <span>{{ currentYear }}</span> Hoang Vo. All rights reserved. <br> Built with <i
+      &copy; <span>{{ currentYear }}</span> Hoang Vo. All rights reserved <br> Built with <i
         class="fa-brands fa-vuejs" />
     </div>
   </footer>
