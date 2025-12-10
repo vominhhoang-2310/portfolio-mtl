@@ -129,8 +129,8 @@ p {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
-  font-weight: 600;
+  gap: 40px;
+  font-weight: 200;
   color: #1f2937;
   align-items: center;
   justify-content: center;
