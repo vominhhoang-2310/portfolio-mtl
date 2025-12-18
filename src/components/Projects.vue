@@ -15,7 +15,6 @@ const projects = ref(
 const activeId = ref(projects.value[0]?.id ?? null);
 const autoplayId = ref(null);
 const carouselViewport = ref(null);
-const carouselTrack = ref(null);
 const isMobile = ref(false);
 let mediaQuery = null;
 let handleMediaChange = null;
@@ -63,7 +62,7 @@ const nextProject = () => {
 const startAutoplay = () => {
   if (isMobile.value) return;
   if (autoplayId.value || projects.value.length <= 1) return;
-  autoplayId.value = window.setInterval(() => nextProject(), 5000);
+  autoplayId.value = window.setInterval(() => nextProject(), 6000);
 };
 
 const stopAutoplay = () => {

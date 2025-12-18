@@ -25,6 +25,31 @@ export const projects = [
     ],
   },
   {
+    id: "story-time",
+    title: "Story Time",
+    image: "story_time.png",
+    imageAlt: "Story Time application preview",
+    description:
+      "A kid-friendly digital library for parents and children to store, organize, and read children’s stories together.",
+    highlights: [
+      "Personal project",
+      "Designed and built the project end-to-end—from the UI/UX (kid-friendly, accessible layout and responsive 4-column book grid) to the core features for organizing and displaying children’s stories. I also focused on making the experience modern for parents while staying playful and easy for kids ages 3–8.",
+    ],
+    tags: ["PHP", "MySQL", "Laravel", "Vue.js"],
+    links: [
+      {
+        label: "Visit Site",
+        url: "https://storytime.is-great.net/public/",
+        variant: "primary",
+      },
+      {
+        label: "Code Sample Soon",
+        variant: "outline",
+        disabled: true,
+      },
+    ],
+  },
+  {
     id: "abra-resources",
     title: "ABRA Resources",
     image: "ABRA_resources.png",
